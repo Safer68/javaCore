@@ -1,0 +1,6 @@
+# Project exclude paths
+/out/
+/out/
+/.idea/
+/.gitignore
+/javaCore.iml
