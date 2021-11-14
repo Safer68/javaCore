@@ -3,14 +3,14 @@ package Lesson3;
 public class LessonProgram3 {
 
     public static void main(String[] args) {
-        TypeByte ObjectByteMax = new TypeByte(TypeByte.byteMax);
-        TypeByte ObjectByteMin = new TypeByte(TypeByte.byteMin);
-        TypeShort ObjectShortMax = new TypeShort(TypeShort.shortMax);
-        TypeShort ObjectShortMin = new TypeShort(TypeShort.shortMin);
-        TypeInt ObjectIntMax = new TypeInt(TypeInt.intMax);
-        TypeInt ObjectIntMin = new TypeInt(TypeInt.intMin);
-        TypeLong ObjectLongMax = new TypeLong(TypeLong.longMax);
-        TypeLong ObjectLongMin = new TypeLong(TypeLong.longMin);
+        TypeByte ObjectByteMax = new TypeByte(TypeByte.BYTE_MAX);
+        TypeByte ObjectByteMin = new TypeByte(TypeByte.BYTE_MIN);
+        TypeShort ObjectShortMax = new TypeShort(TypeShort.SHORT_MAX);
+        TypeShort ObjectShortMin = new TypeShort(TypeShort.SHORT_MIN);
+        TypeInt ObjectIntMax = new TypeInt(TypeInt.INT_MAX);
+        TypeInt ObjectIntMin = new TypeInt(TypeInt.INT_MIN);
+        TypeLong ObjectLongMax = new TypeLong(TypeLong.LONG_MAX);
+        TypeLong ObjectLongMin = new TypeLong(TypeLong.LONG_MIN);
         System.out.println("Переменная \"a\" ObjectByteMax=  " + ObjectByteMax.getA());
         System.out.println("Переменная \"a\" ObjectByteMin= " + ObjectByteMin.getA());
         System.out.println("Переменная \"a\" ObjectShortMax= " + ObjectShortMax.getA());
@@ -19,10 +19,10 @@ public class LessonProgram3 {
         System.out.println("Переменная \"a\" ObjectIntMin= " + ObjectIntMin.getA());
         System.out.println("Переменная \"a\" ObjectLongMax= " + ObjectLongMax.getA());
         System.out.println("Переменная \"a\" ObjectLongMin= " + ObjectLongMin.getA());
-        ObjectByteMax.addОne();
-        ObjectShortMax.addОne();
-        ObjectIntMax.addОne();
-        ObjectLongMax.addОne();
+        ObjectByteMax.addOne();
+        ObjectShortMax.addOne();
+        ObjectIntMax.addOne();
+        ObjectLongMax.addOne();
         ObjectByteMin.removeOne();
         ObjectShortMin.removeOne();
         ObjectIntMin.removeOne();
