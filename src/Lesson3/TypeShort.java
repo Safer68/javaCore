@@ -2,21 +2,19 @@ package Lesson3;
 
 public class TypeShort {
     private short a;
-    final public static short shortMax = 32767;
-    final public static short shortMin = -32768;
+    public final static short SHORT_MAX = 32767;
+    public final static short SHORT_MIN = -32768;
 
     public TypeShort(short a) {
         this.a = a;
     }
 
-    public void addОne() {
+    public void addOne() {
         this.a++;
-        System.out.println("Переменная \"short\" увеличилась на 1 ");
     }
 
     public void removeOne() {
         this.a--;
-        System.out.println("Переменная \"short\" уменьшилась на 1 ");
     }
 
     public short getA() {
