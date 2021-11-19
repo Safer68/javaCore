@@ -10,14 +10,12 @@ public class Ojsc extends LegalEntity {
 
     @Override
     public double profit() {
-        double profit = super.profit() - ((double)getProceeds() / 100) * roadTax;
-        return profit;
+        return super.profit() - ((double)getProceeds() / 100) * roadTax;
     }
 
     @Override
     public double tax() {
-        double tax = super.tax() + ((double) getProceeds() / 100) * roadTax;
-        return tax;
+        return super.tax() + ((double) getProceeds() / 100) * roadTax;
     }
 
 }

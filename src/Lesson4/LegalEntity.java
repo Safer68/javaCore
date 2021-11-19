@@ -18,13 +18,11 @@ public class LegalEntity {
     }
 
     public double profit() {
-        double profit = proceeds - ((double)proceeds / 100) * taxPercentage;
-        return profit;
+        return proceeds - ((double) proceeds / 100) * taxPercentage;
     }
 
     public double tax() {
-        double tax = ((double)proceeds / 100) * taxPercentage;
-        return tax;
+        return ((double) proceeds / 100) * taxPercentage;
     }
 
 }
