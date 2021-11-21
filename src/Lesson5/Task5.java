@@ -8,7 +8,7 @@ public class Task5 {
     }
 
     private int prov(double a, int b) {
-        if (a / b > 0) {
+        if (a / b > 1) {
             return (int) (a % b);
         } else
             return (int) (a / b);

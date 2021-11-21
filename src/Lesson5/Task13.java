@@ -1,6 +1,7 @@
 package Lesson5;
 
 public class Task13 {
+    private static final int A = 25;
     public static void Multiplication() {
         int i = 1;
         double sum = 1;
@@ -8,7 +9,7 @@ public class Task13 {
             sum = sum * i;
             i++;
         }
-        while (i < 25);
+        while (i <= A);
 
         System.out.println(sum);
     }
