@@ -5,7 +5,7 @@ public class MethodMain {
         System.out.println("---------Task4-----------");
         System.out.println(Task4.SummaAndMultiplication(45,85));
         System.out.println("---------Task5-----------");
-        Task5 time = new Task5(2000003);//
+        Task5 time = new Task5(5);
         time.convertSeconds();
         System.out.println("---------Task6-----------");
         System.out.println(Task6.lastSeven(458));
