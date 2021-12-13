@@ -3,7 +3,7 @@ package Lesson10;
 import java.util.Scanner;
 
 public class Task28 {
-    String string;
+    private String string;
 
     public Task28() {
         Scanner in = new Scanner(System.in);
@@ -16,10 +16,14 @@ public class Task28 {
         for (int i = 0; i < string.length(); i++) {
             symbol = string.charAt(i);
             if (' ' == symbol) {
-                n.append(string.charAt(i - 1));
+                if (' ' != string.charAt(i - 1)) {
+                    n.append(string.charAt(i - 1));
+                }
             }
         }
-        n.append(string.charAt(string.length() - 1));
+        if (' ' != string.length() - 1) {
+            n.append(string.charAt(string.length() - 1));
+        }
         return n.toString();
     }
 

@@ -3,7 +3,7 @@ package Lesson10;
 import java.util.Scanner;
 
 public class Task26 {
-    String string;
+    private String string;
 
     public Task26() {
         Scanner in = new Scanner(System.in);
