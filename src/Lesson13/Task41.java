@@ -37,10 +37,9 @@ public class Task41 {
     }
 
     public static void main(String[] args) {
-        Task41 task41 = new Task41(15);
+        Task41 task41 = new Task41(Task39.NUMBER_OF_STUDENTS);
         task41.printListRating();
         System.out.println("------------");
         System.out.println(task41.maxRating());
-        //Collections
     }
 }

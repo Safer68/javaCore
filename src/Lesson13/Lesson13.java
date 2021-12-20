@@ -12,7 +12,8 @@ import java.util.List;
  */
 
 public class Lesson13 implements MethodsLesson13 {
-
+    public static final int SIZE_LIST = 1_000_000;
+    public static final int RETURN_QUANTITY = 100_000;
 
     @Override
     public void setRandom(List<Integer> list, int size) {
@@ -22,14 +23,14 @@ public class Lesson13 implements MethodsLesson13 {
     }
 
     @Override
-    public void getRandom(List <Integer> list, int quantity) {
+    public void getRandom(List<Integer> list, int quantity) {
         for (int i = 0; i < quantity; i++) {
             list.get((int) (Math.random() * list.size()));
         }
     }
 
     @Override
-    public void setRandomList(List <Integer> list, int quantity) {
+    public void setRandomList(List<Integer> list, int quantity) {
         for (int i = 0; i < quantity; i++) {
             list.add((int) (Math.random() * list.size()), (int) (Math.random() * list.size()));
         }
@@ -40,29 +41,29 @@ public class Lesson13 implements MethodsLesson13 {
         ArrayList arrayList = new ArrayList(lesson13);
         LinkedList linkedList = new LinkedList(lesson13);
 
-        arrayList.writeList(1_000_000);
-        linkedList.writeList(1_000_000);
+        arrayList.writeList(SIZE_LIST);
+        linkedList.writeList(SIZE_LIST);
 
         long start = System.nanoTime();
-        arrayList.returnRandomList(100_000);
+        arrayList.returnRandomList(RETURN_QUANTITY);
         long end = System.nanoTime();
         System.out.println("ArrayList выполнил возврат произвольного значения 100000 раз за: "
                 + (double) (end - start) / 1_000_000_000 + " секунд");
 
         start = System.nanoTime();
-        linkedList.returnRandomList(100_000);
+        linkedList.returnRandomList(RETURN_QUANTITY);
         end = System.nanoTime();
         System.out.println("LinkedList выполнил возврат произвольного значения 100000 раз за: "
                 + (double) (end - start) / 1_000_000_000 + " секунд");
 
         start = System.nanoTime();
-        arrayList.writeRandomList(100_000);
+        arrayList.writeRandomList(RETURN_QUANTITY);
         end = System.nanoTime();
         System.out.println("ArrayList выполнил вставку в середину произвольного значения 100000 раз за: "
                 + (double) (end - start) / 1_000_000_000 + " секунд");
 
         start = System.nanoTime();
-        linkedList.writeRandomList(100_000);
+        linkedList.writeRandomList(RETURN_QUANTITY);
         end = System.nanoTime();
         System.out.println("LinkedList выполнил вставку в середину произвольного значения 100000 раз за: "
                 + (double) (end - start) / 1_000_000_000 + " секунд");

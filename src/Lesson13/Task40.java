@@ -32,12 +32,10 @@ public class Task40 {
     }
 
     public static void main(String[] args) {
-        Task40 task40 = new Task40(10);
+        Task40 task40 = new Task40(Task39.NUMBER_OF_STUDENTS);
         task40.printListRandom();
         System.out.println("------------");
         task40.delDouble();
         task40.printListRandom();
-
-
     }
 }

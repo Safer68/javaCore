@@ -1,6 +1,7 @@
 package Lesson13;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -10,6 +11,8 @@ import java.util.List;
 
 public class Task39 {
     private final List<Integer> listRating = new ArrayList<>();
+    public static final int NUMBER_OF_STUDENTS = 15;
+    public static final int BAD_RATING=4;
 
     public Task39(int size) {
         for (int i = 0; i < size; i++) {
@@ -24,20 +27,19 @@ public class Task39 {
     }
 
     public void delBadGrade(int a) {
-        Object[] array2 = listRating.toArray();
-        for (Object e : array2) {
-            if ((Integer) e <= a) {
-                listRating.remove(e);
+        Iterator<Integer> iterator = listRating.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next() <= a) {
+                iterator.remove();
             }
         }
     }
 
     public static void main(String[] args) {
-        Task39 task39 = new Task39(10);
+        Task39 task39 = new Task39(NUMBER_OF_STUDENTS);
         task39.printListRating();
         System.out.println("------------------");
-        task39.delBadGrade(4);
+        task39.delBadGrade(BAD_RATING);
         task39.printListRating();
-
     }
 }
