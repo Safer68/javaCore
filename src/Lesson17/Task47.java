@@ -16,8 +16,10 @@ public class Task47 {
         File file = new File("Text.txt");
 
         try (Writer writer = new PrintWriter(file)) {
+
             file.createNewFile();
             writer.write("dhfk jgdhkjfghdkjf, gnvbkd, jgdklf, jdfkljglkd, dfjkgdjfgdf,");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

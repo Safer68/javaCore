@@ -8,7 +8,9 @@ package Lesson17;
 public class Task43 {
     public static void main(String[] args) {
         try {
+
             throw new NullPointerException();
+
         } catch (NullPointerException e) {
             e.printStackTrace();
         }

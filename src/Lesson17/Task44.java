@@ -7,7 +7,9 @@ package Lesson17;
 public class Task44 {
     public static void main(String[] args) {
         try {
+
             throw new CustomException();
+
         } catch (CustomException e) {
             System.out.println(e);
         }

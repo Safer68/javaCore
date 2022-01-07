@@ -66,8 +66,10 @@ public class Task48 {
     }
 
     public static void delDouble(List list) {
+
         Set<Integer> set = new LinkedHashSet<>(list);
         list.clear();
         list.addAll(set);
+
     }
 }

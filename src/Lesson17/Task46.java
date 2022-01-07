@@ -8,6 +8,7 @@ import java.io.File;
 public class Task46 {
 
     public static void main(String[] args) {
+
         File folder = new File("C:/");
 
         for (File file :folder.listFiles()) {
