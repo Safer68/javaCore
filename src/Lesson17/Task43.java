@@ -11,6 +11,7 @@ public class Task43 {
             throw new NullPointerException();
         } catch (NullPointerException e) {
             e.printStackTrace();
+
         }
     }
 }

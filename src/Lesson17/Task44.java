@@ -11,6 +11,7 @@ public class Task44 {
         } catch (CustomException e) {
             System.out.println(e);
         }
+
     }
 
     public static class CustomException extends Exception {

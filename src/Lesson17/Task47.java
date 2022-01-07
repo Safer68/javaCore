@@ -21,7 +21,6 @@ public class Task47 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         System.out.println("Количество символов ',' в файле: " + searchChar(file, SEARCH_ZAP));
         System.out.println("Количество слов в файле: " + searchChar(file, SEARCH_SLOV));
 

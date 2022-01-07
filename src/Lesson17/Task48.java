@@ -69,5 +69,6 @@ public class Task48 {
         Set<Integer> set = new LinkedHashSet<>(list);
         list.clear();
         list.addAll(set);
+
     }
 }
