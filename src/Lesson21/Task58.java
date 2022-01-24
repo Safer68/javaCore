@@ -4,11 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -26,24 +25,26 @@ public class Task58 {
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
+        List<Future<List<String>>> list = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-
-            try {
-                executorService.submit(() -> createCallable().call()).get().forEach(System.out::println);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            list.add(executorService.submit(() -> createCallable().call()));
         }
         executorService.shutdown();
+        list.forEach(listFuture -> {
+            try {
+                listFuture.get().forEach(System.out::println);
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private static Callable<List<String>> createCallable() throws InterruptedException {
         Thread.sleep((new Random().nextInt(2) + 1) * 1000);
         System.out.println(Thread.currentThread().getName());
         return () -> Stream.generate(() -> new File(DIRECTORY + Thread.currentThread()
-                .getName() + "-" + new Random().nextInt(100)))
+                        .getName() + "-" + new Random().nextInt(100)))
                 .limit(10)
                 .peek(Task58::newFile)
                 .map(File::getName)
